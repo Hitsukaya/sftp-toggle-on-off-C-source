@@ -127,3 +127,9 @@ sudo chown root:root /srv/sftp-root
 sudo chmod 755 /srv/sftp-root
 
 
+# Enable SFTP root (safe mode)
+sudo /usr/local/bin/sftp-toggle-root-safe on
+
+# Disable SFTP root (safe mode)
+sudo /usr/local/bin/sftp-toggle-root-safe off
+
