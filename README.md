@@ -119,3 +119,11 @@ sudo cp conf/sftp-toggle.conf /etc/
 sudo cp systemd/sftp-toggle.service /etc/systemd/system/
 
 sudo systemctl daemon-reload
+
+sudo mkdir -p /srv/sftp-root
+
+sudo chown root:root /srv/sftp-root
+
+sudo chmod 755 /srv/sftp-root
+
+
