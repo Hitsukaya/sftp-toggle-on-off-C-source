@@ -1,0 +1,14 @@
+[Unit]
+Description=Root SFTP Toggle Safe Mode Service
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/sftp-toggle-root-safe %i
+RemainAfterExit=yes
+StandardOutput=syslog
+StandardError=syslog
+User=root
+
+[Install]
+WantedBy=multi-user.target
