@@ -1,0 +1,10 @@
+sftp-toggle/
+├── bin/
+│   └── sftp-toggle        
+├── conf/
+│   └── sftp-toggle.conf   
+├── systemd/
+│   └── sftp-toggle.service   
+├── src/
+│   └── main.c             
+└── README.md

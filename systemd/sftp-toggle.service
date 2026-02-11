@@ -1,0 +1,15 @@
+[Unit]
+Description=SFTP Toggle Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/sftp-toggle
+Restart=no
+StandardInput=tty
+TTYPath=/dev/tty1
+WorkingDirectory=/usr/local/bin
+User=root
+
+[Install]
+WantedBy=multi-user.target
