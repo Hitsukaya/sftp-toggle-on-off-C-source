@@ -3,12 +3,11 @@ Description=SFTP Toggle Service
 After=network.target
 
 [Service]
-Type=simple
-ExecStart=/usr/local/bin/sftp-toggle
-Restart=no
-StandardInput=tty
-TTYPath=/dev/tty1
-WorkingDirectory=/usr/local/bin
+Type=oneshot
+ExecStart=/usr/local/bin/sftp-toggle %i
+RemainAfterExit=yes
+StandardOutput=syslog
+StandardError=syslog
 User=root
 
 [Install]
