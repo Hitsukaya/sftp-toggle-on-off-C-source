@@ -1,10 +1,13 @@
 sftp-toggle/
-├── bin/
-│   └── sftp-toggle        
+├── bin/                  
 ├── conf/
-│   └── sftp-toggle.conf   
-├── systemd/
-│   └── sftp-toggle.service   
+│   └── sftp-toggle.conf.example
 ├── src/
-│   └── main.c             
-└── README.md
+│   └── main.c
+├── systemd/
+│   └── sftp-toggle.service
+├── tests/                  
+├── README.md
+├── LICENSE
+├── Makefile
+└── .gitignore
