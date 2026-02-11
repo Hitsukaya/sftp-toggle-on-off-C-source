@@ -1,3 +1,33 @@
+# SFTP Toggle - Temporary SFTP Access Control
+
+A safe and controlled SFTP permission toggle tool using POSIX ACLs (`setfacl`).  
+Enable temporary SFTP access to a directory for a user and revoke it cleanly to reduce attack surface.
+
+## Features
+
+- Fully reversible access toggle (`on` / `off`)
+- ACL-based, no `chmod 777` or ownership changes
+- Optional IP whitelist for root access
+- Systemd service integration
+- Logging via syslog for audit
+
+## Installation
+
+```bash
+# Compile the source
+make
+
+# Copy executable
+sudo cp bin/sftp-toggle /usr/local/bin/
+
+# Copy config example
+sudo cp conf/sftp-toggle.conf.example /etc/sftp-toggle.conf
+
+# Copy systemd unit
+sudo cp systemd/sftp-toggle.service /etc/systemd/system/
+sudo systemctl daemon-reload
+```
+
 SFTP ON / OFF Access Toggle for `/path/html/`
 
 This document describes a **temporary and controlled SFTP permission escalation**
@@ -132,4 +162,5 @@ sudo /usr/local/bin/sftp-toggle-root-safe on
 
 # Disable SFTP root (safe mode)
 sudo /usr/local/bin/sftp-toggle-root-safe off
+
 
